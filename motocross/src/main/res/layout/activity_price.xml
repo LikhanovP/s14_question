@@ -1,0 +1,277 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <data>
+
+        <variable
+            name="viewModel"
+            type="com.rosa.swift.mvvm.price.PriceViewModel"/>
+    </data>
+
+    <com.sothree.slidinguppanel.SlidingUpPanelLayout
+        android:id="@+id/sliding_layout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="bottom"
+        app:umanoAnchorPoint="0.3"
+        app:umanoInitialState="collapsed"
+        app:umanoOverlay="false"
+        app:umanoPanelHeight="@dimen/price_route_info_panel_height"
+        app:umanoShadowHeight="4dp"
+        tools:context="com.rosa.swift.mvvm.price.PriceActivity">
+
+        <!-- MAIN CONTENT -->
+        <FrameLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <com.rosa.swift.core.ui.views.YandexMapView
+                android:id="@+id/map_view"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_gravity="top"
+                android:layout_marginTop="@dimen/price_btn_show_height"/>
+
+            <android.support.design.widget.CoordinatorLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+                <android.support.design.widget.AppBarLayout
+                    android:id="@+id/appbar_layout"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:fitsSystemWindows="true"
+                    app:elevation="4dp"
+                    app:expanded="false">
+
+                    <android.support.design.widget.CollapsingToolbarLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:background="@color/price_background"
+                        app:contentScrim="@color/sdvor_yellow"
+                        app:expandedTitleGravity="bottom|center"
+                        app:layout_scrollFlags="scroll|exitUntilCollapsed"
+                        app:scrimAnimationDuration="@android:integer/config_shortAnimTime"
+                        app:titleEnabled="false">
+
+                        <LinearLayout
+                            xmlns:android="http://schemas.android.com/apk/res/android"
+                            xmlns:tools="http://schemas.android.com/tools"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:background="@color/price_background"
+                            android:orientation="vertical"
+                            android:padding="4dp">
+
+                            <RelativeLayout
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content">
+
+                                <android.support.v7.widget.AppCompatImageButton
+                                    android:id="@+id/start_position_button"
+                                    android:layout_width="@dimen/price_image_btn_size"
+                                    android:layout_height="@dimen/price_image_btn_size"
+                                    android:layout_alignParentEnd="true"
+                                    android:layout_alignParentRight="true"
+                                    android:layout_centerVertical="true"
+                                    android:background="?android:selectableItemBackground"
+                                    android:onClick="onClick"
+                                    android:src="@drawable/ic_place_black_32dp"/>
+
+                                <android.support.design.widget.TextInputLayout
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:layout_toLeftOf="@id/start_position_button"
+                                    android:layout_toStartOf="@id/start_position_button">
+
+                                    <EditText
+                                        android:id="@+id/price_start_pos_et"
+                                        style="@style/TextInput.Price"
+                                        android:hint="@string/price_txt_hint_address_start"
+                                        android:onClick="onClick"
+                                        android:text="@{viewModel.startAddress.toString()}"
+                                        tools:text="Тюмень, ул. 50 лет Октября, 109"/>
+
+                                </android.support.design.widget.TextInputLayout>
+
+                            </RelativeLayout>
+
+                            <RelativeLayout
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content">
+
+                                <android.support.v7.widget.AppCompatImageButton
+                                    android:id="@+id/end_position_button"
+                                    android:layout_width="@dimen/price_image_btn_size"
+                                    android:layout_height="@dimen/price_image_btn_size"
+                                    android:layout_alignParentEnd="true"
+                                    android:layout_alignParentRight="true"
+                                    android:layout_centerVertical="true"
+                                    android:background="?android:selectableItemBackground"
+                                    android:onClick="onClick"
+                                    android:src="@drawable/ic_place_black_32dp"/>
+
+                                <android.support.design.widget.TextInputLayout
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:layout_toLeftOf="@id/end_position_button"
+                                    android:layout_toStartOf="@id/end_position_button">
+
+                                    <EditText
+                                        android:id="@+id/price_end_pos_et"
+                                        style="@style/TextInput.Price"
+                                        android:hint="@string/price_txt_hint_address_end"
+                                        android:onClick="onClick"
+                                        android:text="@{viewModel.endAddress.toString()}"
+                                        tools:text="Тюмень, ул. Пермякова, 74"/>
+
+                                </android.support.design.widget.TextInputLayout>
+
+                            </RelativeLayout>
+
+                            <android.support.design.widget.TextInputLayout
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:paddingLeft="4dp"
+                                android:paddingRight="@dimen/price_image_btn_size">
+
+                                <EditText
+                                    android:id="@+id/price_transport_et"
+                                    style="@style/TextInput.Price"
+                                    android:hint="@string/price_txt_hint_transport_type"
+                                    android:onClick="onClick"
+                                    android:text="@{viewModel.transport.name}"/>
+
+                            </android.support.design.widget.TextInputLayout>
+
+                            <Button
+                                android:id="@+id/price_get_btn"
+                                style="@style/Button.Green"
+                                android:layout_width="match_parent"
+                                android:layout_height="@dimen/price_btn_show_height"
+                                android:maxHeight="@dimen/price_btn_show_height"
+                                android:onClick="onClick"
+                                android:text="@string/price_btn_show"
+                                android:theme="@style/StartButton"/>
+
+                        </LinearLayout>
+
+                        <android.support.v7.widget.Toolbar
+                            android:id="@+id/toolbar"
+                            android:layout_width="match_parent"
+                            android:layout_height="@dimen/price_btn_show_height"
+                            app:layout_collapseMode="pin"/>
+
+                    </android.support.design.widget.CollapsingToolbarLayout>
+
+                </android.support.design.widget.AppBarLayout>
+
+            </android.support.design.widget.CoordinatorLayout>
+
+            <LinearLayout
+                android:id="@+id/progress_bar_layout"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_marginTop="@dimen/price_btn_show_height"
+                android:background="@android:color/transparent"
+                android:gravity="center"
+                android:orientation="vertical"
+                android:visibility="gone">
+
+                <ProgressBar
+                    android:id="@+id/progress_bar"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:indeterminate="true"/>
+
+            </LinearLayout>
+
+        </FrameLayout>
+
+        <!-- SLIDING LAYOUT -->
+        <LinearLayout
+            xmlns:android="http://schemas.android.com/apk/res/android"
+            xmlns:tools="http://schemas.android.com/tools"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background="@color/price_background"
+            android:orientation="vertical"
+            android:paddingTop="2dp">
+
+            <!-- Стоимость маршрута -->
+            <TextView
+                android:id="@+id/route_info_title_text_view"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:text="@{viewModel.title}"
+                android:textColor="@android:color/black"
+                android:textSize="16sp"
+                android:textStyle="bold"/>
+
+            <GridLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_gravity="center"
+                android:columnCount="2"
+                android:orientation="horizontal"
+                android:padding="16dp">
+
+                <!-- Стоимость маршрута -->
+                <TextView
+                    android:paddingBottom="8dp"
+                    android:text="@string/price_route_cost_txt"
+                    android:textSize="18sp"/>
+
+                <TextView
+                    android:layout_gravity="end"
+                    android:paddingBottom="8dp"
+                    android:text="@{viewModel.routePrice.stringPrice}"
+                    android:textSize="18sp"/>
+
+                <!-- Стоимость 1 км -->
+                <TextView
+                    android:paddingBottom="8dp"
+                    android:text="@string/price_route_cost_point_txt"
+                    android:textSize="18sp"/>
+
+                <TextView
+                    android:layout_gravity="end"
+                    android:paddingBottom="8dp"
+                    android:text="@{viewModel.routePrice.stringCostPoint}"
+                    android:textSize="18sp"/>
+
+                <!-- Расстояние маршрута -->
+                <TextView
+                    android:paddingBottom="8dp"
+                    android:text="@string/price_route_path_txt"
+                    android:textSize="18sp"/>
+
+                <TextView
+                    android:layout_gravity="end"
+                    android:paddingBottom="8dp"
+                    android:text="@{viewModel.routePath.stringLength}"
+                    android:textSize="18sp"/>
+
+                <!-- Время в пути без учета пробок -->
+                <TextView
+                    android:paddingBottom="8dp"
+                    android:text="@string/price_route_time_txt"
+                    android:textSize="18sp"/>
+
+                <TextView
+                    android:layout_gravity="end"
+                    android:paddingBottom="8dp"
+                    android:text="@{viewModel.routePath.stringTime}"
+                    android:textSize="18sp"/>
+
+            </GridLayout>
+
+        </LinearLayout>
+
+    </com.sothree.slidinguppanel.SlidingUpPanelLayout>
+
+</layout>

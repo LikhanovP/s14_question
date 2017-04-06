@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="com.rosa.swift.core.ui.activities.CupRequestActivity">
+
+    <SurfaceView
+        android:id="@+id/surfaceView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"/>
+
+    <ImageButton
+        android:id="@+id/btnTakePhoto"
+        android:layout_width="80dp"
+        android:layout_height="80dp"
+        android:layout_gravity="center_horizontal|bottom"
+        android:layout_margin="18dp"
+        android:background="@android:color/transparent"
+        android:longClickable="true"
+        android:scaleType="fitCenter"
+        android:src="@drawable/photo_btn1" />
+
+    <ImageButton
+        android:id="@+id/btnChangeCamera"
+        android:layout_width="80dp"
+        android:layout_height="80dp"
+        android:layout_gravity="top|right"
+        android:layout_margin="18dp"
+        android:background="@android:color/transparent"
+        android:longClickable="true"
+        android:scaleType="fitCenter"
+        android:src="@drawable/ic_action_camera_dark" />
+
+</FrameLayout>

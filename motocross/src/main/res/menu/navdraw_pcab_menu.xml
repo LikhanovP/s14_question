@@ -1,0 +1,50 @@
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+    <!--Title Item-->
+    <!--<item-->
+    <!--android:id="@id/navigation_drawer_actionbar_title"-->
+    <!--android:title="@string/title_activity_pcab"-->
+    <!--android:icon="@drawable/ic_launcher"-->
+    <!--android:orderInCategory="01"/>-->
+    <!--Menu Items-->
+    <item
+        android:id="@id/pcab_action_delivery_list"
+        android:icon="@drawable/ic_nd_today_light"
+        android:orderInCategory="10"
+        android:title="@string/pcab_action_delivery_list_text"/>
+
+    <item
+        android:id="@id/pcab_action_swift_room_list"
+        android:icon="@drawable/ic_nd_chat_light"
+        android:orderInCategory="30"
+        android:title="@string/pcab_action_swift_room_list_text"/>
+
+    <item
+        android:id="@+id/pcab_action_indicator"
+        android:orderInCategory="36"
+        android:icon="@drawable/ic_action_id_card_light"
+        android:title="@string/pcab_action_indicator_text"/>
+
+    <item
+        android:id="@id/pcab_action_settings"
+        android:icon="@drawable/ic_nd_settings_light"
+        android:orderInCategory="40"
+        android:title="@string/pcab_action_settings_text"/>
+
+    <item
+        android:id="@id/pcab_action_photo_base"
+        android:icon="@drawable/ic_action_id_card_light"
+        android:orderInCategory="45"
+        android:title="@string/pcab_action_photo_base_text"/>
+
+    <item
+        android:id="@+id/action_price"
+        android:icon="@drawable/ic_action_price_light_32dp"
+        android:orderInCategory="55"
+        android:title="@string/action_price"/>
+
+    <item
+        android:id="@id/pcab_action_exit"
+        android:icon="@drawable/ic_nd_exit_dark"
+        android:orderInCategory="60"
+        android:title="@string/pcab_action_exit_text"/>
+</menu>

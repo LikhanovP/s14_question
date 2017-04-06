@@ -1,0 +1,146 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    package="com.rosa.motocross"
+    android:installLocation="internalOnly">
+
+    <uses-permission android:name="android.permission.ACCESS_FINE_LOCATION"/>
+    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE"/>
+    <uses-permission android:name="android.permission.ACCESS_WIFI_STATE"/>
+    <uses-permission android:name="android.permission.BLUETOOTH"/>
+    <uses-permission android:name="android.permission.BLUETOOTH_ADMIN"/>
+    <uses-permission android:name="android.permission.CALL_PHONE"/>
+    <uses-permission android:name="android.permission.CAMERA"/>
+    <uses-permission android:name="android.permission.INTERNET"/>
+    <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE"/>
+    <uses-permission android:name="android.permission.READ_LOGS"/>
+    <uses-permission android:name="android.permission.SYSTEM_ALERT_WINDOW"/>
+    <uses-permission android:name="android.permission.VIBRATE"/>
+    <uses-permission android:name="android.permission.WAKE_LOCK"/>
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE"/>
+
+    <uses-feature
+        android:name="android.hardware.telephony"
+        android:required="false"/>
+    <uses-feature
+        android:name="android.hardware.location"
+        android:required="false"/>
+    <uses-feature
+        android:name="android.hardware.location.gps"
+        android:required="false"/>
+    <uses-feature
+        android:name="android.hardware.camera"
+        android:required="false"/>
+    <uses-feature
+        android:name="android.hardware.camera.autofocus"
+        android:required="false"/>
+
+    <application
+        android:name="com.rosa.swift.SwiftApplication"
+        android:allowBackup="true"
+        android:icon="@drawable/ic_launcher"
+        android:label="@string/motocross_app_name"
+        android:theme="@style/SdvorTheme"
+        tools:replace="android:label">
+
+        <service android:name="com.rosa.swift.core.services.QueueService"/>
+        <service
+            android:name="com.rosa.swift.core.services.LocationService"
+            android:enabled="true">
+        </service>
+        <service android:name="com.ru.ingenico.jarcus2.android.ArcusService"/>
+        <service android:name="com.ingenico.pclservice.PclService"/>
+        <service android:name="com.ingenico.pclservice.BluetoothService"/>
+
+        <provider
+            android:name="android.support.v4.content.FileProvider"
+            android:authorities="${applicationId}.provider"
+            android:exported="false"
+            android:grantUriPermissions="true">
+            <meta-data
+                android:name="android.support.FILE_PROVIDER_PATHS"
+                android:resource="@xml/provider_paths"/>
+        </provider>
+
+        <activity
+            android:name="com.rosa.swift.core.ui.activities.MainActivity"
+            android:configChanges="orientation|screenSize"
+            android:label="@string/motocross_app_name"
+            android:launchMode="singleTop"
+            android:screenOrientation="portrait">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN"/>
+                <category android:name="android.intent.category.LAUNCHER"/>
+                <action android:name="com.rosa.motocross.chat.open"/>
+            </intent-filter>
+        </activity>
+
+        <activity
+            android:name="com.rosa.swift.core.ui.activities.DocumentsDialogActivity"
+            android:configChanges="orientation|keyboardHidden|screenSize"
+            android:label="@string/title_activity_documents_list"
+            android:launchMode="singleTop"
+            android:screenOrientation="portrait"
+            android:theme="@style/Dialog.NoActionBar"/>
+
+        <activity
+            android:name="com.rosa.swift.core.ui.activities.QuestActivity"
+            android:screenOrientation="portrait"
+            android:label="@string/title_activity_quest"/>
+
+        <activity
+            android:name="com.giljulio.imagepicker.ui.ImagePickerActivity"
+            android:label="@string/title_activity_picker"/>
+
+        <activity
+            android:name="com.rosa.swift.core.ui.activities.CupRequestActivity"
+            android:label="@string/title_activity_cup_request"
+            android:launchMode="singleTop"
+            android:screenOrientation="portrait"/>
+
+        <activity
+            android:name="com.rosa.swift.mvp.ratings.documents.PhotoDocumentActivity"
+            android:label="@string/photo_base_title"
+            android:screenOrientation="portrait"/>
+
+        <activity
+            android:name="com.rosa.swift.core.ui.activities.CameraActivity"
+            android:theme="@style/AppTheme.NoActionBar">
+        </activity>
+
+        <activity
+            android:name="com.rosa.swift.mvvm.price.PriceActivity"
+            android:label="@string/title_activity_price"
+            android:launchMode="singleTop"
+            android:screenOrientation="portrait"
+            android:theme="@style/AppTheme.NoActionBar.FitsSystemWindows"/>
+
+        <activity
+            android:name="com.rosa.swift.mvvm.price.suggest.SuggestActivity"
+            android:screenOrientation="portrait"
+            android:theme="@style/AppTheme.NoActionBar.FitsSystemWindows"/>
+
+        <activity
+            android:name="com.rosa.swift.core.ui.activities.DialogActivity"
+            android:launchMode="singleTop"
+            android:screenOrientation="portrait"
+            android:theme="@style/Dialog.NoActionBar"/>
+
+        <activity
+            android:name="com.rosa.swift.core.ui.activities.DeliveryMapActivity"
+            android:label="@string/activity_title_delivery_map"
+            android:launchMode="singleTop"
+            android:screenOrientation="portrait"/>
+
+        <activity
+            android:name="com.rosa.swift.core.ui.activities.RelocationActivity"
+            android:label="@string/activity_title_relocation"
+            android:launchMode="singleTop"
+            android:screenOrientation="portrait"/>
+
+        <meta-data
+            android:name="io.fabric.ApiKey"
+            android:value="${crashlyticsApiKey}"/>
+    </application>
+</manifest>

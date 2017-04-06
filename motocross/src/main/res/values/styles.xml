@@ -1,0 +1,227 @@
+<resources>
+
+
+    <!-- SdvorTheme -->
+
+
+    <style name="SdvorTheme" parent="Theme.AppCompat.Light.DarkActionBar">
+        <item name="colorAccent">@color/grey</item>
+        <item name="android:alertDialogStyle">@style/SdvorTheme.AlertDialog</item>
+    </style>
+
+    <style name="SdvorTheme.AlertDialog" parent="@style/Theme.AppCompat.Dialog.Alert"/>
+
+    <style name="SdvorTheme.ProgressDialog" parent="@android:style/Theme.Holo.Light">
+        <item name="android:windowBackground">@color/progress_dialog_background</item>
+        <item name="android:layout_gravity">center</item>
+    </style>
+
+    <style name="LoginForm.Button" parent="android:Widget.Button">
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:layout_weight">1</item>
+        <item name="android:textColor">@android:color/white</item>
+        <item name="android:textSize">20sp</item>
+        <item name="android:textStyle">bold</item>
+    </style>
+
+    <style name="LoginForm.Button.Ok">
+        <item name="android:background">@drawable/sdvortheme_btn_ok</item>
+    </style>
+
+    <style name="LoginForm.Button.Cancel">
+        <item name="android:background">@drawable/sdvortheme_btn_cancel</item>
+    </style>
+
+    <style name="LoginForm.Button.Execute">
+        <item name="android:background">@drawable/sdvortheme_btn_execute</item>
+    </style>
+
+    <style name="LoginForm.Button.Exit">
+        <item name="android:background">@drawable/sdvortheme_btn_exit</item>
+    </style>
+
+    <style name="ListView">
+        <item name="android:divider">@null</item>
+        <item name="android:background">@drawable/listview_background</item>
+    </style>
+
+    <style name="ListViewItem">
+        <item name="android:background">@drawable/listview_item_selector</item>
+        <item name="android:layout_width">fill_parent</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:layout_centerHorizontal">true</item>
+        <item name="android:minHeight">48dp</item>
+        <item name="android:orientation">horizontal</item>
+        <item name="android:divider">@drawable/divider_item_light</item>
+        <item name="android:showDividers">middle</item>
+    </style>
+
+    <style name="Header">
+        <item name="android:background">@drawable/sdvortheme_fragment_header_background</item>
+        <item name="android:gravity">center_vertical</item>
+        <item name="android:minHeight">48dp</item>
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:layout_height">match_parent</item>
+    </style>
+
+    <style name="HeaderText">
+        <item name="android:textColor">@color/sdvor_yellow</item>
+    </style>
+
+    <style name="HeaderCaption">
+        <item name="android:textColor">@color/sdvor_yellow</item>
+        <item name="android:textSize">20sp</item>
+        <item name="android:textStyle">bold</item>
+        <item name="android:paddingLeft">16dp</item>
+        <item name="android:paddingRight">16dp</item>
+        <item name="android:paddingTop">4dp</item>
+        <item name="android:paddingBottom">4dp</item>
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:layout_height">wrap_content</item>
+    </style>
+
+    <style name="FormTextCaption">
+        <item name="android:layout_width">wrap_content</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:textColor">@color/app_text_gray_color</item>
+        <item name="android:textSize">14sp</item>
+        <item name="android:paddingRight">8dp</item>
+    </style>
+
+    <style name="FormTextCaption.Big">
+        <item name="android:textSize">18sp</item>
+    </style>
+
+    <style name="FormTextValue">
+        <item name="android:layout_width">wrap_content</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:textSize">14sp</item>
+        <item name="android:textStyle">bold</item>
+    </style>
+
+    <style name="CupTopItemUnavailableText">
+        <item name="android:textColor">@color/cup_session_top_item_locked</item>
+        <item name="android:textStyle">bold</item>
+    </style>
+
+    <style name="CupViewItemAvailableText">
+        <item name="android:textColor">@color/cup_session_top_item_unlocked</item>
+        <item name="android:textStyle">normal</item>
+    </style>
+
+    <!-- PhotoDocuments -->
+
+    <style name="PhotoDocument">
+        <item name="android:layout_width">wrap_content</item>
+        <item name="android:layout_height">wrap_content</item>
+    </style>
+
+    <style name="PhotoDocument.Title">
+        <item name="android:textColor">@color/app_text_gray_color</item>
+        <item name="android:textSize">16sp</item>
+    </style>
+
+    <style name="PhotoDocument.Value">
+        <item name="android:layout_marginTop">4dp</item>
+        <item name="android:layout_marginBottom">4dp</item>
+        <item name="android:layout_marginLeft">16dp</item>
+        <item name="android:textStyle">bold</item>
+        <item name="android:textSize">16sp</item>
+    </style>
+
+    <!-- AppTheme -->
+    <style name="AppTheme" parent="Theme.AppCompat.Light"/>
+
+    <style name="AppTheme.NoActionBar">
+        <item name="windowActionBar">false</item>
+        <item name="windowNoTitle">true</item>
+    </style>
+
+    <style name="AppTheme.NoActionBar.FitsSystemWindows">
+        <item name="android:fitsSystemWindows">false</item>
+    </style>
+
+    <style name="DialogButton" parent="Base.Widget.AppCompat.Button">
+        <item name="android:layout_height">56dp</item>
+        <item name="android:textColor">@android:color/white</item>
+    </style>
+
+    <style name="DialogButton.Positive">
+        <item name="backgroundTint">@color/android_green</item>
+    </style>
+
+    <style name="DialogButton.Neutral">
+        <item name="backgroundTint">@color/grey</item>
+    </style>
+
+    <style name="DialogButton.Negative">
+        <item name="backgroundTint">@color/red</item>
+    </style>
+
+    <style name="ProgressDialog">
+        <item name="android:fullDark">@android:color/transparent</item>
+    </style>
+
+    <style name="Dialog" parent="@style/Base.Theme.AppCompat.Light.Dialog"/>
+
+    <style name="Dialog.NoActionBar">
+        <item name="windowActionBar">false</item>
+        <item name="windowNoTitle">true</item>
+    </style>
+
+    <style name="StartButton" parent="Widget.AppCompat.Button">
+        <item name="colorButtonNormal">@color/price_header</item>
+        <item name="android:textColor">@android:color/white</item>
+    </style>
+
+    <style name="Button" parent="android:Widget.Button">
+        <item name="android:textColor">@android:color/white</item>
+        <item name="android:textSize">20sp</item>
+        <item name="android:textStyle">bold</item>
+    </style>
+
+    <style name="Button.Green">
+        <item name="android:background">@drawable/sdvor_theme_button_green</item>
+    </style>
+
+    <style name="Card">
+        <item name="cardCornerRadius">@dimen/card_corner_radius</item>
+        <item name="contentPadding">@dimen/card_content_padding</item>
+        <item name="cardElevation">@dimen/card_elevation</item>
+        <item name="cardBackgroundColor">@android:color/white</item>
+    </style>
+
+    <style name="Card.Suggest">
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="contentPadding">@dimen/suggest_card_content_padding</item>
+        <item name="android:layout_margin">@dimen/suggest_card_margin</item>
+    </style>
+
+    <style name="TextInput"/>
+
+    <style name="TextInput.Price">
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:clickable">true</item>
+        <item name="android:focusableInTouchMode">false</item>
+        <item name="android:inputType">textMultiLine</item>
+        <item name="android:textColor">@android:color/black</item>
+        <item name="android:textSize">18sp</item>
+    </style>
+
+    <style name="Toast">
+        <item name="android:background">@drawable/sdvor_theme_toast</item>
+    </style>
+
+    <style name="NavigationDrawer" parent="Widget.Design.NavigationView">
+        <item name="android:layout_width">wrap_content</item>
+        <item name="android:layout_height">match_parent</item>
+        <item name="android:layout_gravity">start</item>
+        <item name="android:fitsSystemWindows">true</item>
+        <item name="itemIconTint">@android:color/black</item>
+        <item name="itemTextColor">@android:color/black</item>
+    </style>
+
+</resources>

@@ -1,0 +1,83 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@drawable/listview_item_selector"
+    android:minHeight="48dp"
+    android:orientation="horizontal">
+    <!--style="@style/ListViewItem"-->
+    <!--android:divider="null"-->
+    <LinearLayout
+        android:id="@+id/driver_records_item_info"
+        android:layout_width="match_parent"
+        android:layout_gravity="center_vertical"
+        android:gravity="center_vertical"
+        android:orientation="horizontal"
+        android:paddingLeft="8dp"
+        android:paddingRight="8dp"
+        android:layout_height="64dp"
+        android:weightSum="1">
+
+        <ImageView
+            android:id="@+id/driver_records_item_star"
+            android:layout_width="@dimen/rating_item_icon_size"
+            android:layout_height="@dimen/rating_item_icon_size"
+            android:src="@drawable/ic_rate_star_on"/>
+
+        <LinearLayout
+            android:orientation="vertical"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:paddingTop="10dp"
+            android:layout_weight="0.70">
+
+            <TextView
+                android:id="@+id/driver_records_item_date"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:paddingLeft="10dp"
+                android:paddingRight="10dp"
+                android:textSize="22sp"
+                tools:text="11.11.2011"/>
+
+            <TextView
+                android:text="Отличная работа"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:paddingLeft="10dp"
+                android:paddingRight="10dp"
+                android:textSize="18sp"
+                android:id="@+id/driver_records_item_title"
+                tools:text="88888888888888888888" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:gravity="end"
+            android:layout_weight="0.31">
+
+            <TextView
+                style="@style/FormTextCaption"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/cup_screen_set_txt_rating"
+                android:textSize="18sp"/>
+
+            <TextView
+                android:id="@+id/driver_records_item_mark"
+                style="@style/FormTextValue"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:paddingRight="8dp"
+                android:textSize="18sp"
+                tools:text="10"/>
+
+        </LinearLayout>
+
+    </LinearLayout>
+
+</LinearLayout>

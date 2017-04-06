@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="utf-8"?>
+<servers>
+    <server
+        name="Main"
+        address="194.186.39.38"
+        order="10"
+        port="7878"/>
+    <server
+        name="Reserve"
+        address="178.236.223.102"
+        order="20"
+        port="7878"/>
+</servers>

@@ -1,0 +1,76 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <color name="white">#ffffff</color>
+    <color name="white_smoke">#F5F5F5</color>
+    <color name="black">#000000</color>
+    <color name="teal">#008080</color>
+    <color name="grey">#5d5d5d</color>
+    <color name="red">#E51400</color>
+
+    <color name="app_red_color">#ffff0000</color>
+    <color name="app_gray_color">#ffbebebe</color>
+    <color name="app_text_gray_color">#ff7f7f7f</color>
+    <color name="app_green_color">#ff02aa02</color>
+
+    <color name="list_item_background_start">#ffffff</color>
+    <color name="list_item_background_center">#eaeaea</color>
+    <color name="list_item_background_end">#d6d6d6</color>
+
+    <color name="list_item_background_top_start">#d3d3d3</color>
+    <color name="list_item_background_top_center">#a8a8a8</color>
+    <color name="list_item_background_top_end">#939393</color>
+
+    <color name="list_item_background_execute_start">#FDD923</color>
+    <color name="list_item_background_execute_center">#edcb21</color>
+    <color name="list_item_background_execute_end">#e5be58</color>
+
+    <color name="filter_background1">#96ab20</color>
+    <color name="filter_background2">#7f911b</color>
+    <color name="filter_background3">#6a7916</color>
+
+    <color name="button_cancel_background1">#888</color>
+    <color name="button_cancel_background2">#777</color>
+    <color name="button_cancel_background3">#666</color>
+
+    <color name="button_exit_background1">#FA6161</color>
+    <color name="button_exit_background2">#C62D2D</color>
+    <color name="button_exit_background3">#9B0202</color>
+
+    <color name="delivery_vsart_color1">#ffabdb</color>
+    <color name="delivery_vsart_color2">#ff8bbb</color>
+    <color name="delivery_vsart_color3">#ff6b9b</color>
+
+    <color name="header">#a2aab6</color>
+    <color name="header2">#172b48</color>
+    <color name="header3">#5d6674</color>
+
+    <color name="header_state_online_color1">#fff339</color>
+    <color name="header_state_online_color2">#f7d319</color>
+    <color name="header_state_online_color3">#d7b309</color>
+
+    <color name="header_state_offline_color1">#FF6b73</color>
+    <color name="header_state_offline_color2">#f54b53</color>
+    <color name="header_state_offline_color3">#D52b33</color>
+
+    <color name="header_state_ondelivery_color1">#B3D95E</color>
+    <color name="header_state_ondelivery_color2">#93B93E</color>
+    <color name="header_state_ondelivery_color3">#73991E</color>
+
+    <color name="android_green">#A4C639</color>
+    <color name="sdvor_yellow">#FFD233</color>
+
+    <color name="activity_background">#535353</color>
+    <color name="list_view_background">#C0C0C0</color>
+
+    <color name="cup_session_top_item_locked">#707070</color>
+    <color name="cup_session_top_item_unlocked">#000000</color>
+
+    <color name="price_background">#E9D49E</color>
+    <color name="price_header">#e5be58</color>
+
+    <color name="photo_footer_background">#88331D0C</color>
+    <color name="progress_dialog_background">#80000000</color>
+    <color name="toast_background">#2F4F4F</color>
+
+</resources>

@@ -1,0 +1,126 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    style="@style/ListView"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:minWidth="300dp"
+    android:orientation="vertical">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@drawable/listview_item_selector"
+        android:minHeight="48dp"
+        android:orientation="vertical"
+        android:paddingBottom="12dp"
+        android:paddingLeft="8dp"
+        android:paddingRight="8dp"
+        android:paddingTop="12dp">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+
+            <TextView
+                android:id="@+id/dlv_header_view"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:gravity="center_vertical"
+                android:text="Заголовок"/>
+
+            <ImageButton
+                android:id="@+id/dlv_gps_location_button"
+                android:layout_width="42dp"
+                android:layout_height="42dp"
+                android:layout_marginLeft="8dp"
+                android:background="@drawable/panel_with_border_solid"
+                android:padding="8dp"
+                android:src="@drawable/ic_action_gps_location"
+                android:visibility="gone"/>
+
+            <FrameLayout
+                android:id="@+id/dlv_schema_location_button"
+                android:layout_width="42dp"
+                android:layout_height="42dp"
+                android:layout_marginLeft="8dp"
+                android:background="@drawable/panel_with_border_solid"
+                android:clickable="true"
+                android:visibility="gone">
+
+                <ImageView
+                    android:id="@+id/dlv_schema_image"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:src="@drawable/ic_action_location_schema"/>
+                <!--<ImageButton-->
+                <!--android:id="@+id/dlv_schema_location_button"-->
+                <!--android:layout_width="wrap_content"-->
+                <!--android:layout_height="wrap_content"-->
+                <!--android:padding="8dp"-->
+                <!--android:background="@drawable/panel_with_border_solid"-->
+                <!--android:src="@drawable/ic_action_location_schema"-->
+                <!--android:visibility="visible"/>-->
+                <ProgressBar
+                    android:id="@+id/dlv_schema_progress"
+                    style="?android:attr/progressBarStyle"
+                    android:layout_width="42dp"
+                    android:layout_height="42dp"
+                    android:layout_gravity="center"
+                    android:indeterminate="true"
+                    android:padding="4dp"/>
+
+            </FrameLayout>
+
+        </LinearLayout>
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="2dp"
+            android:layout_marginBottom="5dp"
+            android:layout_marginTop="5dp"
+            android:background="@drawable/divider_item_horizontal_light"/>
+
+        <ScrollView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <TextView
+                android:id="@+id/dlv_text_view"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Тело"/>
+
+        </ScrollView>
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/reject_btn_block"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal">
+
+        <Button
+            android:id="@+id/finishButton"
+            style="@style/LoginForm.Button.Exit"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="@string/menu_item_relocation_complete"
+            android:visibility="gone"/>
+
+        <Button
+            android:id="@+id/buttonCancel"
+            style="@style/LoginForm.Button.Cancel"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="@string/reject_delivery_text"
+            android:visibility="gone"/>
+
+    </LinearLayout>
+
+</LinearLayout>

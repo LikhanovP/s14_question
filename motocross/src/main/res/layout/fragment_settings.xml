@@ -1,0 +1,59 @@
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+             xmlns:tools="http://schemas.android.com/tools"
+             android:layout_width="match_parent"
+             android:layout_height="match_parent"
+             tools:context="com.rosa.swift.core.ui.fragments.SettingsFragment"
+             android:background="@drawable/listview_item_selector">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+
+        <LinearLayout style="@style/Header">
+            <TextView
+                android:id="@+id/textView4"
+                style="@style/HeaderCaption"
+                android:text="@string/chat_settings_caption"/>
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:padding="@dimen/activity_horizontal_margin">
+            <TextView
+                style="@style/FormTextCaption.Big"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textAppearance="?android:attr/textAppearanceMedium"
+                android:text="@string/chat_notifications"
+                android:id="@+id/textView2" />
+
+            <RadioGroup
+                android:id="@+id/chatNotifGroup"
+                android:layout_width="fill_parent"
+                android:layout_height="fill_parent">
+
+                <RadioButton
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Отключить"
+                    android:id="@+id/notifNoneRB" />
+
+                <RadioButton
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Вибрация"
+                    android:id="@+id/vibrateRB" />
+
+                <RadioButton
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Вибрация и звук"
+                    android:id="@+id/soundRB" />
+            </RadioGroup>
+        </LinearLayout>
+    </LinearLayout>
+
+</FrameLayout>

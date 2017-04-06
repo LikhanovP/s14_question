@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+    <item android:id="@+id/action_send_message"
+        android:title="@string/send_message_text"
+        android:icon="@drawable/ic_action_chat_s_dark"
+        android:showAsAction="ifRoom"
+        app:showAsAction="ifRoom" />
+    <item android:id="@+id/action_mark_as_read"
+        android:title="@string/mark_as_read"
+        android:icon="@drawable/ic_action_read"
+        android:showAsAction="ifRoom"
+        app:showAsAction="ifRoom" />
+    <item android:id="@+id/action_refresh_list"
+          android:title="@string/refresh_title"
+          android:icon="@drawable/ic_action_refresh_light_24dp"
+          android:showAsAction="ifRoom"
+          app:showAsAction="ifRoom" />
+</menu>

@@ -1,0 +1,135 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/activity_suggest"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context="com.rosa.swift.mvvm.price.suggest.SuggestActivity">
+
+    <android.support.v7.widget.CardView
+        style="@style/Card.Suggest">
+
+        <RelativeLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content">
+
+            <android.support.v7.widget.AppCompatImageButton
+                android:id="@+id/clear_address_image_button"
+                android:layout_width="32dp"
+                android:layout_height="32dp"
+                android:layout_alignParentEnd="true"
+                android:layout_alignParentRight="true"
+                android:layout_centerVertical="true"
+                android:background="?android:selectableItemBackground"
+                android:clickable="true"
+                android:src="@drawable/ic_action_cancel_black_20dp"/>
+
+            <android.support.v7.widget.AppCompatImageButton
+                android:id="@+id/apply_address_image_button"
+                android:layout_width="32dp"
+                android:layout_height="32dp"
+                android:layout_centerVertical="true"
+                android:layout_marginLeft="8dp"
+                android:layout_marginRight="8dp"
+                android:layout_toLeftOf="@id/clear_address_image_button"
+                android:layout_toStartOf="@id/clear_address_image_button"
+                android:background="?android:selectableItemBackground"
+                android:clickable="true"
+                android:src="@drawable/ic_action_accept_black_24dp"/>
+
+            <EditText
+                android:id="@+id/address_et"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_alignParentLeft="true"
+                android:layout_alignParentStart="true"
+                android:layout_alignParentTop="true"
+                android:layout_toLeftOf="@id/apply_address_image_button"
+                android:layout_toStartOf="@id/apply_address_image_button"
+                android:hint="@string/suggest_txt_address"
+                android:inputType="textMultiLine"
+                android:textSize="18sp"/>
+
+        </RelativeLayout>
+
+    </android.support.v7.widget.CardView>
+
+    <!--
+        <android.support.v7.widget.CardView
+            style="@style/Card.Suggest">
+
+            <RelativeLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content">
+
+                <ImageView
+                    android:id="@+id/pick_map_iv"
+                    android:layout_width="24dp"
+                    android:layout_height="24dp"
+                    android:layout_alignParentRight="true"
+                    android:layout_centerVertical="true"
+                    android:layout_marginLeft="8dp"
+                    android:clickable="true"
+                    android:src="@drawable/ic_place_black_32dp"/>
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_toLeftOf="@id/pick_map_iv"
+                    android:text="@string/suggest_txt_pick_map"
+                    android:textSize="18sp"/>
+
+            </RelativeLayout>
+
+        </android.support.v7.widget.CardView>-->
+
+    <android.support.v7.widget.CardView
+        android:id="@+id/werks_card_view"
+        style="@style/Card.Suggest"
+        android:visibility="gone">
+
+        <RelativeLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content">
+
+            <android.support.v7.widget.AppCompatImageButton
+                android:id="@+id/pick_werk_image_button"
+                android:layout_width="32dp"
+                android:layout_height="32dp"
+                android:layout_alignParentEnd="true"
+                android:layout_alignParentRight="true"
+                android:layout_centerVertical="true"
+                android:background="?android:selectableItemBackground"
+                android:clickable="true"
+                android:src="@drawable/ic_detail_black_32dp"/>
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+                android:layout_toLeftOf="@id/pick_werk_image_button"
+                android:layout_toStartOf="@id/pick_werk_image_button"
+                android:text="@string/suggest_txt_pick_werk"
+                android:textSize="18sp"/>
+
+        </RelativeLayout>
+
+    </android.support.v7.widget.CardView>
+
+    <android.support.v7.widget.CardView
+        style="@style/Card.Suggest"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <ListView
+            android:id="@+id/address_list_view"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+        </ListView>
+
+    </android.support.v7.widget.CardView>
+
+</LinearLayout>

@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+      xmlns:app="http://schemas.android.com/apk/res-auto">
+    <item
+        android:id="@+id/action_assignment_complete"
+        android:icon="@drawable/ic_action_accept_light_24dp"
+        android:orderInCategory="10"
+        android:title="@string/menu_item_relocation_complete"
+        app:showAsAction="ifRoom"/>
+    <item
+        android:id="@+id/action_assignment_print"
+        android:icon="@drawable/ic_action_copy"
+        android:orderInCategory="20"
+        android:title="@string/menu_item_relocation_print"
+        app:showAsAction="ifRoom"/>
+</menu>

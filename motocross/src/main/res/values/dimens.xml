@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <!-- Default screen margins, per the Android Design guidelines. -->
+    <dimen name="activity_horizontal_margin">16dp</dimen>
+    <dimen name="activity_vertical_margin">16dp</dimen>
+    <dimen name="navigation_drawer_width">240dp</dimen>
+
+    <!--Custom buttons-->
+    <dimen name="button_height">56dp</dimen>
+    <dimen name="button_text_size">12sp</dimen>
+    <dimen name="button_margin_left">36dp</dimen>
+    <dimen name="button_margin_right">36dp</dimen>
+    <dimen name="button_margin_left_land">112dp</dimen>
+    <dimen name="button_margin_right_land">112dp</dimen>
+
+    <!-- Price -->
+    <dimen name="price_btn_show_height">48dp</dimen>
+    <dimen name="price_image_btn_size">40dp</dimen>
+    <dimen name="price_route_info_panel_height">24dp</dimen>
+    <dimen name="price_route_info_panel_height_with_border">28dp</dimen>
+
+    <!-- Custom card -->
+    <dimen name="card_margin_left">36dp</dimen>
+    <dimen name="card_margin_right">36dp</dimen>
+    <dimen name="card_margin_bottom">8dp</dimen>
+    <dimen name="card_corner_radius">4dp</dimen>
+    <dimen name="card_content_padding">16dp</dimen>
+    <dimen name="card_elevation">4dp</dimen>
+    <dimen name="card_margin">8dp</dimen>
+
+    <!-- Cup card -->
+    <dimen name="cup_card_corner_radius">12dp</dimen>
+    <dimen name="cup_card_content_padding">2dp</dimen>
+    <dimen name="cup_card_elevation">4dp</dimen>
+    <dimen name="cup_card_margin">8dp</dimen>
+
+    <!-- Suggest card -->
+    <dimen name="suggest_card_content_padding">8dp</dimen>
+    <dimen name="suggest_card_margin">8dp</dimen>
+
+    <!-- Ratings -->
+    <dimen name="rating_item_icon_size">32dp</dimen>
+
+</resources>

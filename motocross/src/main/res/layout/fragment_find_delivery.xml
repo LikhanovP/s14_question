@@ -1,0 +1,39 @@
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+             xmlns:tools="http://schemas.android.com/tools"
+             android:layout_width="match_parent"
+             android:layout_height="match_parent"
+             tools:context="com.rosa.swift.core.ui.fragments.FindDeliveryFragment">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical">
+        <EditText
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:singleLine="true"
+            android:id="@+id/find_tknum_edit"
+            android:inputType="number"
+            android:hint="@string/find_tknum_caption"
+            android:padding="10dp"
+            android:textStyle="bold"/>
+
+        <EditText
+            android:visibility="gone"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:inputType="date"
+            android:hint="@string/find_date_caption"
+            android:id="@+id/find_date_edit"
+             />
+
+        <Button
+            style="@style/LoginForm.Button.Ok"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_weight="0"
+            android:text="@string/find_btn_caption"
+            android:id="@+id/find_btn" />
+    </LinearLayout>
+
+</FrameLayout>

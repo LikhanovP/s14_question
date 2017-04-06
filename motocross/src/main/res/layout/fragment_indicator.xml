@@ -1,0 +1,174 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+
+        <FrameLayout
+            android:id="@+id/frameCup"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_weight="1">
+
+            <LinearLayout
+                android:id="@+id/ln2"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical">
+
+                <LinearLayout
+                    android:id="@+id/linHeader_cup"
+                    style="@style/Header"
+                    android:paddingLeft="8dp"
+                    android:paddingRight="8dp"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:gravity="center"
+                    android:orientation="vertical">
+
+                    <RelativeLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent">
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="match_parent"
+                            android:gravity="center_vertical"
+                            android:paddingRight="10dp"
+                            android:layout_centerVertical="true"
+                            android:paddingTop="6dp"
+                            android:text="@string/title_cup_list"
+                            android:textColor="@color/sdvor_yellow"
+                            android:textSize="24dp"
+                            android:textStyle="bold" />
+
+                        <FrameLayout
+                            android:layout_width="84dp"
+                            android:layout_height="84dp"
+                            android:layout_gravity="center"
+                            android:layout_centerVertical="true"
+                            android:layout_alignParentRight="true"
+                            android:gravity="center">
+
+                            <TextView
+                                android:id="@+id/cup_list_avg_mark"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_gravity="center"
+                                android:paddingTop="10dp"
+                                android:text="0.000"
+                                android:textColor="@color/sdvor_yellow"
+                                android:textSize="18dp"
+                                android:textStyle="bold" />
+
+                            <View
+                                android:id="@+id/cup_list_avg_arc"
+                                android:layout_width="match_parent"
+                                android:layout_height="match_parent"
+                                android:gravity="center" />
+                        </FrameLayout>
+                    </RelativeLayout>
+                </LinearLayout>
+
+                <LinearLayout
+                    android:id="@+id/conCup"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical"
+                    android:visibility="visible">
+
+                    <include layout="@layout/cup_item_top_layout" />
+
+                    <com.rosa.swift.core.ui.views.NonScrollListView
+                        android:id="@+id/cup_list_view"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:visibility="visible" />
+                </LinearLayout>
+            </LinearLayout>
+        </FrameLayout>
+
+
+        <FrameLayout
+            android:id="@+id/frameDrive"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/frameCup"
+            android:layout_weight="1">
+
+            <LinearLayout
+                android:id="@+id/ln1"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical">
+
+                <LinearLayout
+                    android:id="@+id/linHeader"
+                    style="@style/Header"
+                    android:layout_width="match_parent"
+                    android:layout_height="84dp"
+                    android:gravity="center"
+                    android:paddingLeft="8dp"
+                    android:paddingRight="8dp">
+
+                    <RelativeLayout
+                        android:id="@+id/contForAllView"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent">
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="match_parent"
+                            android:gravity="center_vertical"
+                            android:paddingRight="10dp"
+                            android:paddingTop="6dp"
+                            android:text="@string/title_driver_list"
+                            android:layout_centerVertical="true"
+                            android:textColor="@color/sdvor_yellow"
+                            android:textSize="24dp"
+                            android:textStyle="bold" />
+
+                        <FrameLayout
+                            android:layout_width="84dp"
+                            android:layout_height="84dp"
+                            android:layout_gravity="center"
+                            android:layout_centerVertical="true"
+                            android:layout_alignParentRight="true"
+                            android:gravity="center">
+
+                            <TextView
+                                android:id="@+id/driver_records_list_avg_mark"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_gravity="center"
+                                android:paddingTop="10dp"
+                                android:text="0.000"
+                                android:textColor="@color/sdvor_yellow"
+                                android:textSize="18dp"
+                                android:textStyle="bold" />
+
+                            <View
+                                android:id="@+id/driver_records_list_avg_arc"
+                                android:layout_width="match_parent"
+                                android:layout_height="match_parent"
+                                android:gravity="center" />
+                        </FrameLayout>
+                    </RelativeLayout>
+                </LinearLayout>
+
+                <com.rosa.swift.core.ui.views.NonScrollListView
+                    android:id="@+id/driver_records_list_view"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:visibility="visible" />
+            </LinearLayout>
+        </FrameLayout>
+
+
+    </LinearLayout>
+</ScrollView>

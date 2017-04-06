@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@drawable/listview_item_selector"
+    android:minHeight="48dp">
+
+    <ImageView
+        android:id="@+id/drawer_item_icon"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentLeft="true"
+        android:layout_centerVertical="true"
+        android:layout_marginLeft="8dp"
+        android:layout_marginRight="8dp"
+        android:src="@drawable/ic_nd_chat_light" />
+
+    <TextView
+        android:id="@+id/drawer_item_title"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_toRightOf="@id/drawer_item_icon"
+        android:gravity="center_vertical"
+        android:minHeight="48dp"
+        android:paddingRight="8dp"
+        android:text="sdfsdfdfdsf"
+        android:textColor="@color/black"
+        android:textAppearance="?android:attr/textAppearanceListItemSmall"/>
+</RelativeLayout>

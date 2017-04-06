@@ -1,0 +1,65 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/cup_list_item_top"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@drawable/listview_item_top_selector"
+    android:minHeight="80dp"
+    android:paddingLeft="8dp"
+    android:paddingRight="8dp">
+
+    <ImageView
+        android:id="@+id/cup_item_star"
+        android:layout_width="@dimen/rating_item_icon_size"
+        android:layout_height="@dimen/rating_item_icon_size"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true"
+        android:layout_centerVertical="true"
+        android:src="@drawable/ic_rate_star_off"/>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentTop="true"
+        android:layout_centerVertical="true"
+        android:layout_toEndOf="@+id/cup_item_star"
+        android:layout_toRightOf="@+id/cup_item_star"
+        android:orientation="vertical"
+        android:paddingLeft="10dp"
+        android:paddingRight="10dp">
+
+        <TextView
+            android:id="@+id/title_cup_session_txt"
+            style="@style/CupTopItemUnavailableText"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:text="@string/cup_session_list_item_top_title"
+            android:textSize="18sp"/>
+
+        <TextView
+            android:id="@+id/date_next_cup_session_txt"
+            style="@style/CupTopItemUnavailableText"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:layout_marginTop="4dp"
+            android:textSize="14sp"
+            tools:text="17.11.2016 16:00"/>
+
+        <TextView
+            android:id="@+id/time_left_txt"
+            style="@style/CupTopItemUnavailableText"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:layout_marginTop="4dp"
+            android:textSize="14sp"
+            tools:text="1 д : 23 ч : 45 мин : 55 сек."/>
+
+    </LinearLayout>
+
+</RelativeLayout>

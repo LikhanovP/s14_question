@@ -1,0 +1,189 @@
+<android.support.v4.widget.DrawerLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/relocation_drawer"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="com.rosa.swift.core.ui.activities.MainActivity">
+
+    <LinearLayout
+        android:id="@+id/swift_layout"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical">
+
+        <LinearLayout
+            android:id="@+id/header_layout"
+            android:layout_width="match_parent"
+            android:layout_height="48dp"
+            android:background="@drawable/header_state_online_color"
+            android:orientation="vertical">
+
+            <TextView
+                android:id="@+id/header_text_view"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:layout_gravity="center"
+                android:gravity="center"
+                android:text="@string/offline_status"
+                android:textColor="#222222"
+                android:textSize="18sp"
+                android:textStyle="bold"/>
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:background="#808080"/>
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/main_layout"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background="@drawable/listview_background"
+            android:orientation="vertical">
+
+            <LinearLayout
+                android:id="@+id/enter_layout"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="vertical"
+                android:paddingLeft="16dp"
+                android:paddingRight="16dp"
+                android:visibility="gone">
+
+                <Button
+                    android:id="@+id/townBtn"
+                    style="@style/LoginForm.Button.Cancel"
+                    android:layout_marginBottom="4dp"
+                    android:layout_marginTop="4dp"
+                    android:layout_weight="0"
+                    android:drawableLeft="@drawable/ic_action_location_dark"
+                    android:paddingLeft="16dp"
+                    android:paddingRight="48dp"/>
+
+                <Button
+                    android:id="@+id/shift_button"
+                    style="@style/LoginForm.Button.Cancel"
+                    android:layout_marginBottom="4dp"
+                    android:layout_weight="0"
+                    android:drawableLeft="@drawable/ic_action_car_dark"
+                    android:paddingLeft="16dp"
+                    android:paddingRight="48dp"
+                    android:text="@string/action_go_online"/>
+
+                <Button
+                    android:id="@+id/cabinet_button"
+                    style="@style/LoginForm.Button.Cancel"
+                    android:layout_marginBottom="4dp"
+                    android:layout_weight="0"
+                    android:drawableLeft="@drawable/ic_action_id_card_dark"
+                    android:paddingLeft="16dp"
+                    android:paddingRight="48dp"
+                    android:text="@string/action_personal_cabinet"/>
+
+                <Button
+                    android:id="@+id/settings_button"
+                    style="@style/LoginForm.Button.Cancel"
+                    android:layout_marginBottom="4dp"
+                    android:layout_weight="0"
+                    android:drawableLeft="@drawable/ic_action_settings_dark"
+                    android:paddingLeft="16dp"
+                    android:paddingRight="48dp"
+                    android:text="@string/settings_title"/>
+
+                <Button
+                    android:id="@+id/price_button"
+                    style="@style/LoginForm.Button.Cancel"
+                    android:layout_marginBottom="4dp"
+                    android:layout_weight="0"
+                    android:drawableLeft="@drawable/ic_action_price_dark"
+                    android:paddingLeft="16dp"
+                    android:paddingRight="48dp"
+                    android:text="@string/main_menu_price"/>
+
+                <Button
+                    android:id="@+id/location_button"
+                    style="@style/LoginForm.Button.Cancel"
+                    android:layout_weight="0"
+                    android:paddingLeft="16dp"
+                    android:paddingRight="48dp"
+                    android:text="Местоположение"
+                    android:visibility="gone"/>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent">
+
+                    <TextView
+                        android:id="@+id/app_version_string"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="bottom"
+                        android:gravity="right"
+                        android:text="@string/version"/>
+
+                </LinearLayout>
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/dlv_list_layout"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="vertical"
+                android:visibility="visible">
+
+                <ListView
+                    android:id="@+id/dlv_list_view"
+                    style="@style/ListView"
+                    android:layout_width="match_parent"
+                    android:layout_height="0dp"
+                    android:layout_weight="1"/>
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/curr_dlv_layout"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="vertical"
+                android:visibility="visible">
+
+                <include
+                    layout="@layout/curr_dlv_layout"/>
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/dlv_layout"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="vertical"
+                android:visibility="visible">
+
+                <include
+                    layout="@layout/dlv_layout"/>
+
+            </LinearLayout>
+
+        </LinearLayout>
+
+    </LinearLayout>
+
+    <FrameLayout
+        android:id="@+id/container"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:visibility="gone"/>
+
+    <fragment
+        android:id="@+id/navigation_drawer"
+        android:name="com.rosa.swift.core.ui.fragments.NavigationDrawerFragment"
+        android:layout_width="@dimen/navigation_drawer_width"
+        android:layout_height="match_parent"
+        android:layout_gravity="start"
+        tools:layout="@layout/fragment_navigation_drawer"/>
+
+</android.support.v4.widget.DrawerLayout>

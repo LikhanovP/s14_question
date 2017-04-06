@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+      xmlns:app="http://schemas.android.com/apk/res-auto">
+    <item
+        android:id="@+id/action_scan"
+        android:icon="@drawable/ic_action_search_light_24dp"
+        android:orderInCategory="30"
+        android:title="@string/scan_text"
+        app:showAsAction="never"/>
+    <item
+        android:id="@+id/action_incident"
+        android:icon="@drawable/ic_action_camera_dark"
+        android:orderInCategory="30"
+        android:title="@string/incident_text"
+        app:showAsAction="never"/>
+    <item
+        android:id="@+id/action_send_message"
+        android:orderInCategory="50"
+        android:title="@string/send_message_text"
+        app:showAsAction="never"/>
+</menu>

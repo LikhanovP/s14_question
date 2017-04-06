@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <item type="id" name="navigation_drawer_actionbar_title"/>
+    <!--PCab NavDravItems-->
+    <item type="id" name="pcab_action_delivery_list"/>
+    <item type="id" name="pcab_action_find_delivery"/>
+    <item type="id" name="pcab_action_swift_room_list"/>
+    <item type="id" name="pcab_action_photo_base"/>
+    <item type="id" name="pcab_action_settings"/>
+    <item type="id" name="pcab_action_exit"/>
+    <item type="id" name="pcab_action_swift_room"/>
+    <item type="id" name="pcab_action_delivery"/>
+    <item type="id" name="pcab_action_empty"/>
+    <item type="id" name="pcab_action_cup_set_list" />
+    <item type="id" name="pcab_action_indicator"/>
+</resources>

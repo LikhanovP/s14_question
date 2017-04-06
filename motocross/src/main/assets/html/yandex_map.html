@@ -1,0 +1,182 @@
+<html>
+<head>
+
+    <meta http-equiv="content-type" content="text/html; charset=utf-8" />
+    <script src="https://api-maps.yandex.ru/2.1/?lang=ru_RU" type="text/javascript"></script>
+    <!--<script src="https://api-maps.yandex.ru/2.1/?lang=ru_RU&load=Map,Route,Geocode" type="text/javascript"></script>-->
+</head>
+
+<body>
+<div id="map" style="height: 100%; width: 100%; border:1px solid"></div>
+</body>
+
+<script type="text/javascript">
+
+	//выполняет переданную в параметре функцию, когда API готов к использованию
+    ymaps.ready(onAPILoaded);
+
+	//карта
+    var myMap;
+
+    //маршрут
+    var myRoute = 0;
+
+	//отображает маршрут на карте
+	function route(json) {
+		var data = JSON.parse(json);
+
+		ymaps.route(data, { mapStateAutoApply: true }).then(
+			function (route) {
+				addRoute(route);
+			},
+			function (error) {
+				Android.onError("Ошибка построения маршрута", error);
+			}
+		);
+	}
+
+	//отображает карту с центром по заданным координатам
+	function setCenterMap(latitude, longitude) {
+		//по умолчанию координаты г. Тюмени
+		var centerLongitude = 57.153033;
+		var centerLatitude = 65.534328;
+
+		//если координаты не заданы, то отобразим центр карты по умолчанию
+		if (longitude > 0 && latitude > 0) {
+			centerLongitude = longitude;
+			centerLatitude = latitude;
+		}
+
+		myMap = new ymaps.Map(
+		    "map",
+		    {
+		        center:
+		            [
+		                centerLatitude,
+		                centerLongitude
+		            ],
+		        zoom: 12,
+		        controls: ['searchControl', 'zoomControl', 'rulerControl', 'trafficControl', 'typeSelector' ]
+		    }
+		);
+
+		var fullscreenControl = new ymaps.control.FullscreenControl();
+		myMap.controls.add(fullscreenControl);
+		fullscreenControl.enterFullscreen();
+		myMap.controls.remove(fullscreenControl);
+
+        myMap.events.add('click', onMapClicked);
+	}
+
+	//добавляет маршрут на карту
+	function addRoute(route) {
+		//removePoint('1');
+		//removePoint('2');
+		if (myRoute != 0) {
+			myMap.geoObjects.remove(myRoute);
+		}
+
+		var result = {
+			length: route.getLength(),
+			time: route.getTime()
+		}
+
+		//получаем нетранзитные точки маршрута
+		var points = route.getWayPoints();
+        //задаем стиль метки - иконки будут красного цвета, и
+        //их изображения будут растягиваться под контент
+        points.options.set('preset', 'islands#redStretchyIcon');
+        //задаем контент меток в начальной и конечной точках
+        points.get(0).properties.set('iconContent', 'A');
+        points.get(1).properties.set('iconContent', 'B');
+
+		myMap.geoObjects.add(route);
+		myRoute = route;
+
+		Android.onRouteAdded(JSON.stringify(result));
+	}
+
+	//добавляет точку на карте с заданной меткой и координатами
+	function addPoint(code, latitude, longitude) {
+		if (code != 0) {
+			removePoint(code);
+
+			var point = new ymaps.GeoObject({
+				geometry: {
+					type: "Point",
+					coordinates: [latitude, longitude]
+				},
+ 				properties: {
+            	    iconContent: code
+            	}
+			});
+
+			myMap.geoObjects.add(point);
+
+			Android.onPointAdded();
+		}
+	}
+
+	//Добавляет точки на карту
+	function addPoints(json){
+	    var points = JSON.parse(json);
+	    var point;
+	    var color = "";
+	    var i = 0;
+	    for (i = 0; i < points.length; i++) {
+	        if (i == 0){
+	            setCenterMap(points[i].latitude, points[i].longitude);
+                color = "islands#redHomeIcon";
+	        } else {
+	            color = "islands#blueDotIcon";
+	        }
+	        point = new ymaps.Placemark([points[i].latitude, points[i].longitude], {balloonContent: points[i].address}, {preset: color});
+			myMap.geoObjects.add(point);
+			myMap.setBounds(myMap.geoObjects.getBounds(), {checkZoomRange:true, zoomMargin: 20});
+	    }
+	}
+
+	//удаляет все точки на карте - доработать метод
+	function removePoints() {
+		for (i = 0; i < myMap.geoObjects.getLength(); i++) {
+ 			var object = myMap.geoObjects.get(i);
+			if (object.geometry.type == 'Point') {
+        		myMap.geoObjects.remove(object);
+    		}
+		}
+	}
+
+	//удаляет точку на карте по указанной метке
+	function removePoint(code) {
+		for (i = 0; i < myMap.geoObjects.getLength(); i++) {
+ 			var object = myMap.geoObjects.get(i);
+			if (object.properties.get('iconContent') == code) {
+        		myMap.geoObjects.remove(object);
+    		}
+		}
+	}
+
+	//происходит после загрузки API
+	function onAPILoaded() {
+	    Android.onLoaded();
+	}
+
+	//происходит при клике по карте
+	function onMapClicked(e) {
+		var coords = e.get('coords');
+		var latitude = coords[0];
+		var longitude = coords[1];
+		var geocoder = ymaps.geocode(coords, { json: true, kind: 'house', results: 1 });
+		
+		geocoder.then(
+			function (result) {
+				Android.onClicked(JSON.stringify(result), longitude, latitude);
+			},
+			function (error) {
+				Android.onError("Ошибка геокодирования точки", error);
+			}
+		);
+	}
+
+</script>
+</html>

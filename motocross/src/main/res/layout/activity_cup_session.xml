@@ -1,0 +1,77 @@
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+             xmlns:tools="http://schemas.android.com/tools"
+             android:layout_width="match_parent"
+             android:layout_height="match_parent"
+             tools:context="com.rosa.swift.core.ui.activities.CupRequestActivity">
+    <!--<fragment-->
+        <!--android:name="CupRequestFragment"-->
+        <!--android:id="@+id/cup_request_fragment"-->
+        <!--android:layout_width="match_parent"-->
+        <!--android:layout_height="wrap_content"-->
+        <!--android:layout_weight="1"-->
+        <!--tools:layout="@layout/fragment_cup_session" />-->
+
+    <LinearLayout
+        android:orientation="vertical"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <FrameLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:id="@+id/cup_request_fragment"/>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_weight="0"
+            android:orientation="horizontal"
+            android:visibility="visible">
+            <Button
+                style="@style/LoginForm.Button.Ok"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="@string/cup_screen_photo_btn_take"
+                android:id="@+id/cup_do_photo"/>
+            <Button
+                style="@style/LoginForm.Button.Execute"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="@string/cup_screen_photo_btn_send"
+                android:id="@+id/cup_goto_next_view"/>
+            <Button
+                style="@style/LoginForm.Button.Execute"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="@string/cup_screen_photo_btn_delay"
+                android:id="@+id/cup_delay"
+                tools:visibility="gone"/>
+
+
+        </LinearLayout>
+
+    </LinearLayout>
+
+    <SurfaceView
+        android:id="@+id/surfaceView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:visibility="invisible">
+    </SurfaceView>
+
+    <ImageButton
+        android:id="@+id/btnTakePicture"
+        android:layout_width="80dp"
+        android:layout_height="80dp"
+        android:layout_gravity="center_horizontal|bottom"
+        android:src="@drawable/photo_btn1"
+        android:scaleType="fitCenter"
+        android:background="@android:color/transparent"
+        android:layout_margin="18dp"
+        android:longClickable="true"
+        android:visibility="invisible"
+        android:onClick="onClickPicture" />
+
+</FrameLayout>

@@ -1,0 +1,345 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <!-- Главное меню -->
+    <string name="main_menu_price">Прайс</string>
+    <string name="main_menu_town_list_dialog_title">Список городов</string>
+
+    <!-- Название экранов -->
+    <string name="activity_title_delivery_map">Карта доставки</string>
+    <string name="activity_title_relocation">Перемещения</string>
+
+    <!-- Настройки -->
+    <string name="settings_title">Настройки</string>
+    <string name="settings_password_hint">Ключ доступа</string>
+    <string name="settings_driver_name_hint">Позывной</string>
+    <string name="settings_reserve_address_hint">Резервный сервер</string>
+    <string name="settings_phone_hint">Номер телефона</string>
+    <string name="settings_cancel">Отмена</string>
+    <string name="settings_save">Сохранить</string>
+
+    <!-- State 0 -->
+    <string name="action_settings">Настройки</string>
+    <string name="online_status">На смене</string>
+    <string name="offline_status">Не на смене</string>
+    <string name="out_status">Недоступен</string>
+    <string name="cary_status">Назначен</string>
+
+    <!-- На смену -->
+    <string name="action_go_online">На смену</string>
+    <string name="already_online_error">Вы уже на смене!</string>
+    <!--<string name="empty_settings_error">Заполните позывной и адрес сервера!</string>-->
+    <string name="empty_settings_error">Заполните позывной!</string>
+    <string name="go_online_progress_message">Выходим на смену…</string>
+
+    <!-- Завершаем смену -->
+    <string name="go_offline_text">Завершить смену</string>
+    <string name="go_offline_progress_message">Заканчиваем смену…</string>
+    <string name="connection_lost_error">Соединение с сервером потеряно!</string>
+    <string name="session_expired_error">Ваша смена завершена автоматически. Выйдите на смену!</string>
+
+    <!-- Действия с доставкой -->
+    <string name="assign_button_text">Взять</string>
+    <string name="assign_button_back">Закрыть</string>
+    <string name="assign_delivery_progress_message">Берём доставку…</string>
+    <string name="assign_delivery_error">Не удалось взять доставку. Попробуйте ещё раз!</string>
+    <string name="assign_delivery_success">Доставка взята</string>
+    <string name="reject_set_delivery_text">Отказаться от комплекта</string>
+    <string name="reject_delivery_text">Отказаться</string>
+    <string name="unassign_delivery_progress_message">Отказываемся от доставки…</string>
+    <string name="unassign_delivery_error">Не удалось отказаться от доставки. Попробуйте ещё раз!</string>
+    <string name="unassign_delivery_success">Доставка снята</string>
+    <string name="menu_item_relocation_complete">Завершить</string>
+    <string name="finish_delivery_progress_message">Завершаем доставку…</string>
+    <string name="update_delivery_progress_message">Обновляем…</string>
+    <string name="finish_delivery_error">Не удалось завершить доставку. Попробуйте ещё раз!</string>
+    <string name="finish_delivery_success">Доставка завершена</string>
+    <string name="title_activity_delivery_dialog">Взять доставку</string>
+    <string name="assigned_delivery_message">Вам назначена доставка</string>
+    <string name="unassign_delivery_message">Вас сняли с доставки!</string>
+    <string name="reject_set_delivery_confirm">Отказаться от комплекта?</string>
+    <string name="reject_delivery_confirm">Отказаться от доставки?</string>
+    <string name="reject_delivery_set_confirm">Доставка в комплекте. Отказаться от всего комплекта?</string>
+    <string name="finish_delivery_confirm">Завершить доставку?</string>
+    <string name="go_offline_confirm">Закончить смену?</string>
+    <string name="yes_no_confirm">Вы уверены?</string>
+    <string name="open_confirm">Открыть файл</string>
+    <string name="open_local">С диска</string>
+    <string name="open_download">Скачать заново</string>
+    <string name="download_or_open">Если нажмете нет, то файл будет скачан заново.</string>
+
+    <!-- Действия с перемещением -->
+    <string name="relocation_assigned_message">Вам назначено перемещение</string>
+    <string name="relocation_unassigned_message">Вас сняли с перемещения</string>
+    <string name="relocation_complete_error">Не удалось завершить перемещение</string>
+    <string name="relocation_complete_success">Доставка завершена</string>
+
+    <string name="dialog_complete_relocation_title">Завершение перемещения</string>
+    <string name="dialog_complete_relocation_message">Вы уверены, что хотите завершить перемещение?</string>
+    <string name="dialog_complete_relocation_positive">Завершить</string>
+    <string name="dialog_complete_relocation_negative">Закрыть</string>
+
+    <string name="dialog_send_print_title">Отправка на печать</string>
+    <string name="dialog_send_print_message">Вы уверены, что хотите отправить на печать?</string>
+    <string name="dialog_send_print_positive">Отправить</string>
+    <string name="dialog_send_print_negative">Закрыть</string>
+
+    <string name="notification_title">Стриж</string>
+    <string name="new_delivery_message">Новая доставка</string>
+    <string name="session_expired_message">Смена завершена!</string>
+    <string name="town_list_load">Загружается список городов…</string>
+    <string name="town_list_load_failed">Не удалось загрузить список городов</string>
+    <string name="plant_list_load">Загружается список "Откуда"</string>
+    <string name="plant_list_load_failed">Не удалось загрузить список "Откуда"</string>
+    <string name="title_activity_werks">Получать доставки с…</string>
+    <string name="filter_werks_text">Получать доставки с…</string>
+    <string name="app_service_stopped">Сервис приложения остановлен</string>
+    <string name="bind_service_error">Не удалось запустить сервис</string>
+    <string name="service_started">Сервис СТРИЖ запущен</string>
+    <string name="go_offline_inspiteof">Завершить без подтверждения на сервере?</string>
+    <string name="phone_text">Номер телефона</string>
+    <string name="call_client_text">Звонок клиенту</string>
+    <string name="no_phone_error">Укажите номер телефона в настройках</string>
+    <string name="call_requested_message">Звонок заказан. Ожидайте…</string>
+    <string name="action_save_settings">Сохранить</string>
+    <string name="action_cancel_settings">Отменить</string>
+    <string name="incident_text">Фото инцидента</string>
+    <string name="title_activity_reasons">Причина отказа</string>
+    <string name="menu_item_relocation_print">Печать</string>
+    <string name="print_delivery_confirm">Отправить на печать?</string>
+    <string name="print_delivery_progress">Печатаем…</string>
+    <string name="print_end_success">Распечатано!</string>
+    <string name="title_cup_list">Фотосессии ЦУП</string>
+    <string name="title_driver_list">Личное дело</string>
+
+    <!-- Место планирования -->
+    <string name="tplst_empty_error">Выберите город</string>
+    <string name="tplst_default_name">Выберите город</string>
+
+    <!-- не забыть поменять в Session.java ! -->
+    <string name="version">6.0.2 (47)</string>
+    <string name="start_waisting_progress_message">Начинаем простой…</string>
+    <string name="start_waisting_error">Не удалось начать простой</string>
+    <string name="end_waisting_progress_message">Заканчиваем простой…</string>
+    <string name="end_waisting_error">Не удалось завершить простой</string>
+    <string name="start_waisting_confirm">Начать простой?</string>
+    <string name="end_waisting_confirm">Завершить простой?</string>
+    <string name="no_location_message">Не удалось определить Ваше положение или данные устарели</string>
+    <string name="gps_disabled_message">Включите GPS!</string>
+    <string name="waist_start_text">Начать простой</string>
+    <string name="waist_end_text">Закончить простой</string>
+    <string name="waist_start_succ">Простой начат!</string>
+    <string name="waist_end_succ">Простой завершен</string>
+    <string name="dlv_update_text">Обновить</string>
+    <string name="title_activity_phone_select">Выберите номер</string>
+    <string name="send_message_text">Отправить сообщение</string>
+    <string name="title_activity_driver_message">Выберите сообщение</string>
+    <string name="dialog_send_comment_title">Комментарий</string>
+    <string name="dialog_send_comment_apply">Отправить</string>
+    <string name="dialog_send_comment_hint">Введите комментарий</string>
+    <string name="send_data_progress">Идёт отправка…</string>
+    <string name="send_photo_progress">Идёт отправка фото…</string>
+    <string name="send_photo_successful">Фото отправлено успешно</string>
+    <string name="send_photo_unsuccessful">"Не удалось отправить фото"</string>
+    <string name="get_data_progress">Получаем данные…</string>
+    <string name="title_activity_quest">Ответьте на вопрос</string>
+    <string name="answer_btn_text">Ответить</string>
+    <string name="answer_btn_next_text">Дальше</string>
+    <string name="answer_btn_prev_text">Назад</string>
+    <string name="answer_confirm_text">Отправить ответ?</string>
+    <string name="title_activity_pcab">Личный кабинет</string>
+    <string name="navigation_drawer_open">Открыть панель навигации</string>
+    <string name="navigation_drawer_close">Закрыть панель навигации</string>
+    <string name="action_personal_cabinet">Личный кабинет</string>
+    <string name="action_relocations">Мои перемещения</string>
+    <string name="find_deliveries">Ищем…</string>
+    <string name="refresh_title">Обновить</string>
+    <string name="find_tknum_caption">Номер доставки</string>
+    <string name="find_date_caption">Дата доставки</string>
+    <string name="find_btn_caption">Найти</string>
+    <string name="go_cabinet_online_progress_message">Входим…</string>
+    <string name="go_cabinet_offline_progress">Выходим…</string>
+    <string name="scan_text">Прикрепить фото ТТН</string>
+    <string name="scan_succeed">Отправлено успешно</string>
+    <string name="scan_failed">Не удалось отправить</string>
+    <string name="title_activity_picker">Отправка фото ТТН</string>
+    <string name="action_load">Загружаем…</string>
+    <string name="action_waiting">Ждите…</string>
+    <string name="mark_as_read">Прочитано</string>
+    <string name="go_offline_for_chat">Завершить смену для перехода в личный кабинет?</string>
+    <string name="new_chat_message">Новое сообщение</string>
+    <string name="action_filter_title">Фильтр</string>
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string name="action_terminal_test">Тест соединения</string>
+    <string name="action_terminal">Меню терминала</string>
+    <string name="action_terminal_pay">Оплата</string>
+    <string name="retry_payment_title">Произошла ошибка</string>
+    <string name="retry">Повторить</string>
+    <string name="no_payreg">Без регистрации</string>
+    <string name="title_activity_cup_request">ЦУП</string>
+    <string name="title_activity_documents_list">Список документов</string>
+    <string name="action_document">Документы</string>
+
+    <!--Чат-->
+    <string name="chat_settings_caption">Настройки чата</string>
+    <string name="chat_notifications">Уведомления</string>
+
+
+    <string name="pcab_action_delivery_list_text">Доставки за сегодня</string>
+    <string name="pcab_action_find_delivery_text">Поиск доставки</string>
+    <string name="pcab_action_swift_room_list_text">Сообщения</string>
+    <string name="pcab_action_cup_set_list_text">Фотосессии ЦУП</string>
+    <string name="pcab_action_driver_records_text">Личное дело</string>
+    <string name="pcab_action_settings_text">Настройки</string>
+    <string name="pcab_action_photo_base_text">Личные данные</string>
+    <string name="pcab_action_cup_photo">ЦУП Фото</string>
+    <string name="pcab_action_exit_text">Выход</string>
+    <string name="pcab_action_indicator_text">Показатели</string>
+
+    <string name="default_actionbar_title">Стриж</string>
+
+
+    <string name="cup_btn_send_text">Отправить</string>
+    <string name="cup_btn_next_text">Дальше</string>
+    <string name="cup_btn_prev_text">Назад</string>
+    <string name="cup_confirm_text">Отправить это фото?</string>
+
+    <string name="photo_base_title">Обновление документа</string>
+
+    <!-- Личные данные водителя -->
+    <string-array name="photo_base_array">
+        <item>Фотография водителя</item>
+        <item>Паспорт (стр. №1)</item>
+        <item>Паспорт (Регистрация)</item>
+        <item>Водительское удостоверение</item>
+        <item>Регистрация автомобиля (лицевая стр.)</item>
+        <item>Регистрация автомобиля (обратная стр.)</item>
+        <item>Регистрация прицепа (лицевая стр.)</item>
+        <item>Регистрация прицепа (обратная стр.)</item>
+    </string-array>
+
+    <!-- Действия с воротами -->
+    <string name="action_open_gate">Открытие ворот</string>
+    <string name="dialog_open_gate_title">Открытие ворот</string>
+    <string name="open_gate_et">Код ворот</string>
+    <string name="open_gate_btn">Открыть</string>
+    <string name="open_gate_message_set_gate_number">Введите номер ворот</string>
+    <string name="open_gate_message_error">Не удалось открыть заданные ворота!</string>
+    <string name="open_gate_message_successful">Ворота открываются</string>
+    <string name="open_gate_message_unsuccessful">Не удалось открыть выбранные ворота!</string>
+    <string name="dialog_open_gate_hint">Введите код</string>
+    <string name="dialog_open_gate_apply">Открыть</string>
+    <string name="open_gate_dialog_cancel">Отмена</string>
+
+    <!-- Действия с фото в личном кабинете -->
+    <string name="photo_document_send_message">Необходимо отправить фотографию</string>
+    <string name="photo_document_pattern_date">yyyy.MM.dd</string>
+    <string name="photo_document_type">Тип документа:</string>
+    <string name="photo_document_date">Дата съемки:</string>
+    <string name="photo_document_actual">Актуально до:</string>
+
+    <!-- Экран фотографирования -->
+    <string name="cup_screen_photo_btn_take">Сделать фото</string>
+    <string name="cup_screen_photo_btn_send">Отправить</string>
+    <string name="cup_screen_photo_btn_delay">Отложить</string>
+    <string name="cup_screen_photo_txt_foreshortening">Ракурс: </string>
+    <string name="cup_dialog_delaying_btn_positive">Отложить</string>
+    <string name="cup_dialog_delaying_btn_negative">Отмена</string>
+    <plurals name="cup_session_offset_message_with_days">
+        <item quantity="one">Вы уверены, что хотите отложить фотосессию на %s день?</item>
+        <item quantity="few">Вы уверены, что хотите отложить фотосессию на %s дня?</item>
+        <item quantity="many">Вы уверены, что хотите отложить фотосессию на %s дней?</item>
+    </plurals>
+    <string name="cup_session_offset_message_without_days">Вы уверены, что хотите отложить фотосессию?</string>
+    <string name="cup_session_delay_progress">Перенос фотосессии…</string>
+    <string name="cup_session_delayed_successful_msg">Фотосессия успешно перенесена</string>
+    <string name="cup_session_delayed_unsuccessful_msg">Не удалось перенести фотосессию</string>
+
+    <!-- Экран списка фотосессий -->
+    <string name="cup_session_list_item_top_title">Следующая фотосессия:</string>
+    <string name="cup_session_offset_title">Перенос фотосессии</string>
+    <string name="cup_session_get_status_progress">Получение статуса фотосессии…</string>
+    <string name="cup_session_get_status_error_msg">Не удалось получить статус фотосессии</string>
+    <string name="cup_session_get_tasks_progress">Получение заданий фотосессии…</string>
+    <string name="cup_screen_set_msg_get_tasks_error">Не удалось получить список задач для фотосессии</string>
+    <string name="cup_screen_set_txt_rating">Оценка:</string>
+
+    <!-- Экран фотосессии -->
+    <string name="cup_screen_photo_txt_rating">Оценка:  </string>
+    <string name="cup_screen_photo_txt_comment">Комментарий</string>
+
+    <!-- Фотосессия ЦУП -->
+    <string name="cup_session_bar_message_body">Запланирована очередная фотосессия ЦУП</string>
+
+    <!-- Личное дело -->
+    <string name="time_title">Время:</string>
+    <string name="mark_title">Оценка:</string>
+    <string name="tknum_title">Транспортировка:</string>
+
+    <!-- Прайс -->
+    <string name="title_activity_price">@string/main_menu_price</string>
+    <string name="action_price">@string/main_menu_price</string>
+    <string name="price_menu_search">Маршрут</string>
+    <string name="price_menu_refresh">Обновить</string>
+    <string name="price_txt_hint_address_start">Откуда</string>
+    <string name="price_txt_hint_address_end">Куда</string>
+    <string name="price_txt_hint_transport_type">Вид транспорта</string>
+    <string name="price_btn_show">Показать</string>
+    <string name="price_get_type_transports_error_msg">Не удалось загрузить список видов транспорта</string>
+    <string name="price_get_price_route_error_msg">Не удалось получить стоимость маршрута</string>
+    <string name="price_start_address_empty_error_msg">Не задан начальный адрес</string>
+    <string name="price_end_address_empty_error_msg">Не задан конечный адрес</string>
+    <string name="price_type_transport_empty_error_msg">Не задан вид транспорта</string>
+    <string name="price_dialog_title_transports">Виды транспортов</string>
+    <string name="price_map_load_error_msg">Не удалось загрузить карту</string>
+    <string name="price_route_cost_txt">Стоимость маршрута:</string>
+    <string name="price_route_cost_point_txt">Стоимость 1 км:</string>
+    <string name="price_route_path_txt">Расстояние:</string>
+    <string name="price_route_time_txt">Время в пути:</string>
+    <string name="price_cost_not_define">Стоимость маршрута не определена</string>
+    <string name="price_add_route_error_msg">Ошибка построения маршрута</string>
+    <string name="price_add_point_error_msg">Ошибка добавления адреса</string>
+    <string name="price_add_point_process_msg">Укажите место на карте</string>
+
+    <!-- Адрес доставки -->
+    <string name="suggest_txt_address">Поиск по адресу</string>
+    <string name="suggest_txt_pick_werk">Выбрать из списка отгрузок</string>
+    <string name="suggest_request_addresses_error_msg">Не удалось получить список адресов</string>
+    <string name="suggest_get_plant_list_error_msg">Не удалось загрузить список отгрузок</string>
+    <string name="suggest_plant_error_msg">Для выбранной отгрузки заданы некорректные координаты</string>
+    <string name="suggest_dialog_plant_list">Список отгрузок</string>
+    <string name="suggest_request_first_address_error_msg">Не удалось определить адрес</string>
+
+    <!-- Местоположение -->
+    <string name="location_dialog_message">Для работы на смене необходимо использовать GPS. Включите GPS или выйдите со смены</string>
+    <string name="location_dialog_title">@string/motocross_app_name</string>
+    <string name="location_dialog_positive">Настройки</string>
+    <string name="location_notification_message">Включена GPS локация</string>
+    <string name="location_notification_title">@string/motocross_app_name</string>
+
+    <!-- Разрешения -->
+    <string name="permission_location_dialog_message">Для работы с GPS необходимы соответствующие разрешения, проверьте настройки приложения</string>
+    <string name="permission_location_dialog_title">@string/motocross_app_name</string>
+    <string name="permission_location_dialog_positive">Настройки</string>
+
+    <!-- Настройки приложения -->
+    <string name="settings_number_error">Указан неправильный номер</string>
+
+    <!-- Ошибки разрешений -->
+    <string name="error_message_permission_camera">Для работы с камерой требуются разрешения</string>
+
+    <!-- Список доставок -->
+    <string name="delivery_find">Найти доставку</string>
+    <string name="delivery_search_dialog_title">Поиск доставки</string>
+    <string name="delivery_search">Найти</string>
+    <string name="delivery_search_cancel">Отмена</string>
+    <string name="delivery_detail_dialog_title">Информация по доставке</string>
+    <string name="delivery_delivery_number">Номер доставки:</string>
+    <string name="delivery_date">Исполнено:</string>
+    <string name="delivery_dialog_detail_close">Закрыть</string>
+    <string name="delivery_empty_item_message">Доставок нет</string>
+    <string name="delivery_number_mask">№ %s</string>
+
+    <!-- Список транспортировок -->
+    <string name="assignment_empty_item_message">Транспортировок нет</string>
+
+</resources>

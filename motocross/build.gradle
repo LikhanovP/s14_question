@@ -1,0 +1,142 @@
+apply plugin: 'com.android.application'
+apply plugin: 'me.tatarka.retrolambda'
+apply plugin: 'io.fabric'
+
+android {
+    signingConfigs {
+        release {
+            keyAlias 'objective'
+            keyPassword 'rosa_objective'
+            storeFile file('keystore.jks')
+            storePassword 'rosa_objective'
+        }
+    }
+    compileSdkVersion 25
+    buildToolsVersion '25.0.2'
+    useLibrary 'org.apache.http.legacy'
+    defaultConfig {
+        versionCode 87
+        versionName '6.5.8'
+        minSdkVersion 15
+        targetSdkVersion 25
+    }
+    buildTypes {
+        release {
+            signingConfig signingConfigs.release
+        }
+
+        debug {
+            splits {
+                abi {
+                    enable true
+                    universalApk true
+                }
+            }
+        }
+    }
+
+    sourceSets { main { assets.srcDirs = ['src/main/assets', 'src/main/assets/'] } }
+
+    dataBinding {
+        enabled = true
+    }
+
+    compileOptions {
+        sourceCompatibility JavaVersion.VERSION_1_8
+        targetCompatibility JavaVersion.VERSION_1_8
+    }
+
+    productFlavors {
+        stable {
+            applicationId 'com.rosa.motocross'
+            manifestPlaceholders = [crashlyticsApiKey: 'e391024dd06e1acad89e8bdf19c57a16b72fe406']
+            resValue "string", "motocross_app_name", "Стриж"
+        }
+
+        beta {
+            applicationId 'com.rosa.motocross.beta'
+            versionNameSuffix 'b'
+            manifestPlaceholders = [crashlyticsApiKey: 'f403c66f459877af269b3c25e1b0e1433c7d721d']
+            resValue "string", "motocross_app_name", "Стриж Beta"
+        }
+    }
+}
+
+//task nativeLibsToJar(type: Zip, description: 'create a jar archive of the native libs') {
+//    destinationDir file("libs")
+//    baseName 'native-libs'
+//    extension 'jar'
+//    from fileTree(dir: 'libs', include: '**/*.so')
+//    into 'lib/'
+//}
+
+//tasks.withType(JavaCompile) {
+//    compileTask -> compileTask.dependsOn(nativeLibsToJar);
+//}
+
+tasks.withType(JavaCompile) {
+    options.encoding = "utf-8"
+}
+
+repositories {
+    maven { url 'https://maven.fabric.io/public' }
+    flatDir {
+        dirs 'libs'
+    }
+}
+
+ext {
+    support_library_version = '25.0.0'
+    moxy_version = '1.4.6'
+    okhttp3_version = '3.3.1'
+    retrofit2_version = '2.2.0'
+}
+
+dependencies {
+    compile fileTree(include: 'ksoap2-android-assembly-3.0.0-RC.4-jar-with-dependencies.jar', dir: 'libs')
+    testCompile 'junit:junit:4.12'
+
+    compile files('libs/jArcus2_1.1.2_6.jar')
+    compile files('libs/PclUtilities.jar')
+    compile files('libs/PclServiceLib.jar')
+    compile files('libs/native-libs.jar')
+    compile(name: 'jArcus2-android-release_1.1.2_1', ext: 'aar')
+
+    //Android support
+    compile "com.android.support:appcompat-v7:$support_library_version"
+    compile "com.android.support:design:$support_library_version"
+    compile "com.android.support:cardview-v7:$support_library_version"
+    compile "com.android.support:recyclerview-v7:$support_library_version"
+    compile "com.android.support:support-v4:$support_library_version"
+    compile "com.android.support:support-annotations:$support_library_version"
+    compile 'com.google.code.gson:gson:2.8.0'
+
+    //Retrofit2
+    compile "com.squareup.retrofit2:retrofit:$retrofit2_version"
+    compile "com.squareup.retrofit2:converter-gson:$retrofit2_version"
+    compile "com.squareup.okhttp3:logging-interceptor:$okhttp3_version"
+    compile "com.squareup.okhttp3:okhttp:$okhttp3_version"
+
+    //Custom views
+    compile 'com.sothree.slidinguppanel:library:3.3.1'
+    compile 'ru.tinkoff.decoro:decoro:1.3.2'
+
+    //LibForViewPager
+    compile 'com.romandanylyk:pageindicatorview:0.0.7'
+
+    //Moxy
+    annotationProcessor "com.arello-mobile:moxy-compiler:$moxy_version"
+    compile "com.arello-mobile:moxy-app-compat:$moxy_version"
+
+    //Glide
+    compile 'com.github.bumptech.glide:glide:3.7.0'
+
+    //RxJava
+    compile 'io.reactivex.rxjava2:rxjava:2.0.8'
+    compile 'io.reactivex.rxjava2:rxandroid:2.0.1'
+
+    //Crashlytics
+    compile('com.crashlytics.sdk.android:crashlytics:2.6.7@aar') {
+        transitive = true;
+    }
+}

@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+    <item
+        android:id="@+id/action_pcab"
+        android:icon="@drawable/ic_action_id_card_light"
+        android:orderInCategory="10"
+        android:title="@string/action_personal_cabinet"/>
+    <item
+        android:id="@+id/action_relocations"
+        android:icon="@drawable/ic_action_idle_time_light"
+        android:orderInCategory="10"
+        android:title="@string/action_relocations"/>
+    <item
+        android:id="@+id/action_open_gate"
+        android:icon="@drawable/ic_action_id_card_light"
+        android:orderInCategory="20"
+        android:title="@string/action_open_gate"/>
+</menu>

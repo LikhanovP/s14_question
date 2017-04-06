@@ -1,0 +1,2 @@
+configurations.create("default")
+artifacts.add("default", file('jArcus2-android.aar'))

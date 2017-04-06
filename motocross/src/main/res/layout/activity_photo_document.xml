@@ -1,0 +1,99 @@
+<FrameLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="com.rosa.swift.mvp.ratings.documents.PhotoDocumentActivity">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical">
+
+        <android.support.v7.widget.CardView
+            style="@style/Card"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="4dp">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical">
+
+                <TextView
+                    style="@style/PhotoDocument.Title"
+                    android:text="@string/photo_document_type"/>
+
+                <TextView
+                    android:id="@+id/photo_document_type_txt"
+                    style="@style/PhotoDocument.Value"
+                    tools:text="Фото водителя"/>
+
+                <TextView
+                    style="@style/PhotoDocument.Title"
+                    android:text="@string/photo_document_date"/>
+
+                <TextView
+                    android:id="@+id/photo_document_date_txt"
+                    style="@style/PhotoDocument.Value"
+                    tools:text="04.04.2017"/>
+
+                <TextView
+                    style="@style/PhotoDocument.Title"
+                    android:text="@string/photo_document_actual"/>
+
+                <TextView
+                    android:id="@+id/photo_document_actual_txt"
+                    style="@style/PhotoDocument.Value"
+                    tools:text="-"/>
+
+            </LinearLayout>
+
+        </android.support.v7.widget.CardView>
+
+        <android.support.v7.widget.CardView
+            style="@style/Card"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_margin="4dp"
+            android:padding="8dp">
+
+            <ImageView
+                android:id="@+id/photo_base_send"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                tools:src="@drawable/img_camera"
+                tools:ignore="ContentDescription"/>
+
+        </android.support.v7.widget.CardView>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_weight="0"
+            android:orientation="horizontal"
+            android:visibility="visible">
+
+            <Button
+                android:id="@+id/photo_base_do_photo"
+                style="@style/LoginForm.Button.Ok"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="@string/cup_screen_photo_btn_take"/>
+
+            <Button
+                android:id="@+id/photo_base_goto_next_view"
+                style="@style/LoginForm.Button.Execute"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:alpha="50"
+                android:enabled="false"
+                android:text="@string/cup_screen_photo_btn_send"/>
+
+        </LinearLayout>
+
+    </LinearLayout>
+
+</FrameLayout>

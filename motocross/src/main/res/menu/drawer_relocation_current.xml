@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu
+    xmlns:android="http://schemas.android.com/apk/res/android">
+    <group android:checkableBehavior="none">
+        <item
+            android:id="@+id/action_open_cabinet"
+            android:icon="@drawable/ic_action_id_card_light"
+            android:orderInCategory="10"
+            android:title="@string/action_personal_cabinet"/>
+        <item
+            android:id="@+id/action_send_message"
+            android:icon="@drawable/ic_action_send_message"
+            android:orderInCategory="20"
+            android:title="@string/send_message_text"/>
+        <item
+            android:id="@+id/action_incident_photo"
+            android:icon="@drawable/ic_action_camera_light"
+            android:orderInCategory="30"
+            android:title="@string/incident_text"/>
+        <item
+            android:id="@+id/action_show_documents"
+            android:icon="@drawable/ic_action_documents_light"
+            android:orderInCategory="40"
+            android:title="@string/action_document"/>
+        <item
+            android:id="@+id/action_update"
+            android:icon="@drawable/ic_action_refresh_dark_32dp"
+            android:orderInCategory="50"
+            android:title="@string/dlv_update_text"/>
+        <item
+            android:id="@+id/action_open_gate"
+            android:icon="@drawable/ic_action_id_card_light"
+            android:orderInCategory="60"
+            android:title="@string/action_open_gate"/>
+        <!--
+        <item
+            android:id="@+id/action_show_terminal"
+            android:icon="@drawable/ic_action_terminal_light"
+            android:title="@string/action_terminal"/>
+        <item
+            android:id="@+id/action_waist_start"
+            android:icon="@drawable/ic_action_player_stop_light"
+            android:orderInCategory="45"
+            android:title="@string/waist_start_text"/>
+        <item
+            android:id="@+id/action_waist_end"
+            android:icon="@drawable/ic_action_player_play_light"
+            android:orderInCategory="45"
+            android:title="@string/waist_end_text"/>
+        -->
+    </group>
+</menu>
